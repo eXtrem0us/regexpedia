@@ -1,0 +1,8 @@
+[PARSER]
+    Name    iotop
+    Format  regex
+    Regex   ^(?<time>[^\ ]*)\ *(?<PID>[\d]*)\ *(?<PRIO>[^\ ]*)\ (?<USER>[^\ ]*)[^\d]*(?<DISKREAD>[\d]*\.[\d]*)[^\d]*(?<DISKWRITE>[\d]*\.[\d]*)[^\d]*(?<SWAPIN>[\d]*\.[\d]*)[^\d]
+    Time_Format %H:%M:%S
+    Time_Key time
+    Time_Keep On
+    types PID:integer DISKREAD:float DISKWRITE:float SWAPIN:float IO:float
